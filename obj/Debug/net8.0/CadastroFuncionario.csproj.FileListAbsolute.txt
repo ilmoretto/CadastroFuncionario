@@ -1,0 +1,14 @@
+C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\bin\Debug\net8.0\CadastroFuncionario.exe
+C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\bin\Debug\net8.0\CadastroFuncionario.deps.json
+C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\bin\Debug\net8.0\CadastroFuncionario.runtimeconfig.json
+C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\bin\Debug\net8.0\CadastroFuncionario.dll
+C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\bin\Debug\net8.0\CadastroFuncionario.pdb
+C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\obj\Debug\net8.0\CadastroFuncionario.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\obj\Debug\net8.0\CadastroFuncionario.AssemblyInfoInputs.cache
+C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\obj\Debug\net8.0\CadastroFuncionario.AssemblyInfo.cs
+C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\obj\Debug\net8.0\CadastroFuncionario.csproj.CoreCompileInputs.cache
+C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\obj\Debug\net8.0\CadastroFuncionario.dll
+C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\obj\Debug\net8.0\refint\CadastroFuncionario.dll
+C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\obj\Debug\net8.0\CadastroFuncionario.pdb
+C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\obj\Debug\net8.0\CadastroFuncionario.genruntimeconfig.cache
+C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\obj\Debug\net8.0\ref\CadastroFuncionario.dll
