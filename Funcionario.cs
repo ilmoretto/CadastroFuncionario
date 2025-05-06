@@ -119,7 +119,7 @@ public class Funcionario
 
         if (sDigito != Convert.ToInt32(cpf[10].ToString())) 
         {// aqui é uma validação, se o segundo digito calculado for difarente do informado, cpfValido = false
-            Console.WriteLine("CPF Inválido");
+            Console.WriteLine("\nCPF Inválido");
             cpfValido = false;
         }
 
