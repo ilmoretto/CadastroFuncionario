@@ -55,7 +55,7 @@ public class Funcionario
     public void setCPF(string cpf)
     {
         bool cpfValido = true;
-        cpf = cpf.Replace(".", "").Replace("-", "");
+        cpf = cpf.Replace(".", "").Replace("-", ""); // remove pontos e traço do cpf
         int somaDig1 = 0;
         int somaDig2 = 0;
         int pesoMult = 10;
@@ -65,9 +65,9 @@ public class Funcionario
 
 
         if (cpf.Length != 11)
-        {
+        {// validando se o cpf informado tem 11 caracteres, se não possuir cpfValido = false;
             Console.WriteLine("CPF Inválido.");
-            cpfValido &= false;
+            cpfValido = false;
             
         }
         // ===============validando o primeiro digito================== 
@@ -90,8 +90,8 @@ public class Funcionario
         {// se o resto da divisão for maior ou igual a dois, o dígito é igual a 11 menos o resto da divisão
             pDigito = 11 - restoDiv;
         }
-        if (pDigito != Convert.ToInt32(cpf[9].ToString()))
-        {// aqui é uma validação, se o segundo digito calculado for difarente do informado, cpfValido = false
+        if (pDigito != Convert.ToInt32(cpf[9].ToString()))//converte cada caractere do cpf para inteiro, de acordo com o indice do laço
+        {// aqui é uma validação, se o primeiro digito calculado for difarente do informado, cpfValido = false
             Console.WriteLine("CPF Inválido");
             cpfValido = false;
         }
