@@ -72,12 +72,12 @@ public class Funcionario
         }
         // ===============validando o primeiro digito================== 
         if (cpfValido)
-        {
+        {//multiplicando de 10 a 2, considereando os 9 primeiros caracteres
             for (int i = 0; i < 9; i++)
             {
-                int p = Convert.ToInt32(cpf[i].ToString());
-                somaDig1 += p * pesoMult;
-                pesoMult--;
+                int p = Convert.ToInt32(cpf[i].ToString()); //aqui os caracteres do cpf são convertidos em inteiro, de acordo com o indice do laço
+                somaDig1 += p * pesoMult;// somaDig1 armazena a soma das multiplicações do peso (10 a 2) pelos caracteres do cpf
+                pesoMult--;// apos cada iteração do laço, o valor do peso é decrescido em 1 número
 
             }
         }
@@ -98,7 +98,7 @@ public class Funcionario
         
         // ===============validando o segundo digito================== 
         if (cpfValido)
-        {   // multiplicando de 11 a 2 
+        {   // multiplicando de 11 a 2, considerando os 10 primeiros caracteres        
             for (int i = 0; i < 10; i++)
             {
                 int p2 = Convert.ToInt32(cpf[i].ToString());
