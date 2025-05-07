@@ -90,7 +90,7 @@ public class Funcionario
         {// se o resto da divisão for maior ou igual a dois, o dígito é igual a 11 menos o resto da divisão
             pDigito = 11 - restoDiv;
         }
-        if (pDigito != Convert.ToInt32(cpf[9].ToString()))//converte cada caractere do cpf para inteiro, de acordo com o indice do laço
+        if (pDigito != Convert.ToInt32(cpf[9].ToString()))
         {// aqui é uma validação, se o primeiro digito calculado for difarente do informado, cpfValido = false
             Console.WriteLine("CPF Inválido");
             cpfValido = false;
@@ -123,7 +123,7 @@ public class Funcionario
             cpfValido = false;
         }
 
-        Console.WriteLine($"\nDigito 1: {pDigito}\nDigito 2: {sDigito}");
+       // Console.WriteLine($"\nDigito 1: {pDigito}\nDigito 2: {sDigito}");
     }
 
 }

@@ -12,3 +12,4 @@ C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\obj\Debug\net8.0\refint\C
 C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\obj\Debug\net8.0\CadastroFuncionario.pdb
 C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\obj\Debug\net8.0\CadastroFuncionario.genruntimeconfig.cache
 C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\obj\Debug\net8.0\ref\CadastroFuncionario.dll
+C:\Users\sonat\Documents\Alê\IFRO\CadastroFuncionario\obj\Debug\net8.0\CadastroFuncionario.sourcelink.json
