@@ -1,3 +1,5 @@
+using System.Security.Cryptography.X509Certificates;
+
 public class Funcionario
 {
     public string _Nome;
@@ -7,7 +9,11 @@ public class Funcionario
     private DateTime _DataAdmissao;
     private double _Salario;
 
+    public Funcionario()
+    {
 
+    
+    }
     public void setDataNas(DateTime dataNas)
     {
         DateTime dataAtual = DateTime.Now;
@@ -17,12 +23,12 @@ public class Funcionario
         }
         else
         {
-            Console.WriteLine("Data inválida!");
+            throw new Exception("Data inválida!");
         }
     }
     public DateTime getDataNas()
     {
-        return this._DataNas;
+        return _DataNas;
     }
     public void setDataAdmissao(DateTime dataAdmissao)
     {
@@ -33,7 +39,7 @@ public class Funcionario
         }
         else
         {
-            Console.WriteLine("Data inválida!");
+            throw new Exception("Data inválida!");
         }
     }
     public DateTime getDataAdmissao()
@@ -49,8 +55,13 @@ public class Funcionario
         }
         else
         {
-            Console.WriteLine("Entrada inválida!");
+            throw new Exception("Valor inválido!");
         }
+    }
+
+    public string getCpf()
+    {
+        return this._Cpf;
     }
     public void setCPF(string cpf)
     {
@@ -66,9 +77,8 @@ public class Funcionario
 
         if (cpf.Length != 11)
         {// validando se o cpf informado tem 11 caracteres, se não possuir cpfValido = false;
-            Console.WriteLine("CPF Inválido.");
+            throw new Exception("CPF Inválido.");
             cpfValido = false;
-            
         }
         // ===============validando o primeiro digito================== 
         if (cpfValido)
@@ -86,7 +96,8 @@ public class Funcionario
         { // se o resto da divisão for menor que dois, o dígito é igual a zero
             pDigito = 0;
 
-        }else if (cpfValido && restoDiv > 2)
+        }
+        else if (cpfValido && restoDiv > 2)
         {// se o resto da divisão for maior ou igual a dois, o dígito é igual a 11 menos o resto da divisão
             pDigito = 11 - restoDiv;
         }
@@ -95,7 +106,7 @@ public class Funcionario
             Console.WriteLine("CPF Inválido");
             cpfValido = false;
         }
-        
+
         // ===============validando o segundo digito================== 
         if (cpfValido)
         {   // multiplicando de 11 a 2, considerando os 10 primeiros caracteres        
@@ -106,24 +117,39 @@ public class Funcionario
                 pesoMult2--; // começa em 11 e tira 1 a cada iteração
             }
         }
-        
+
         int restoDiv2 = somaDig2 % 11; // calculando o mod (resto) da soma por 11
         if (cpfValido && restoDiv2 < 2)
         {
             sDigito = 0; // se o resto da divisão for menor que dois, o dígito é igual a zero
-            
-        }else if (cpfValido && restoDiv2 >= 2)
+
+        }
+        else if (cpfValido && restoDiv2 >= 2)
         {
             sDigito = 11 - restoDiv2; // se o resto da divisão for maior ou igual a dois, o dígito é igual a 11 meno o resto
         }
 
-        if (sDigito != Convert.ToInt32(cpf[10].ToString())) 
+        if (sDigito != Convert.ToInt32(cpf[10].ToString()))
         {// aqui é uma validação, se o segundo digito calculado for difarente do informado, cpfValido = false
             Console.WriteLine("\nCPF Inválido");
             cpfValido = false;
         }
 
-       // Console.WriteLine($"\nDigito 1: {pDigito}\nDigito 2: {sDigito}");
+    }
+    // ==============================================================================================================================
+    public void setCpf(string cpf) //modelo do professor
+    {
+        try
+        {
+            Validacao.ValidarCPF(cpf); //usando a validação de cpf com a classe estática
+            _Cpf = cpf;
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        
     }
 
 }
